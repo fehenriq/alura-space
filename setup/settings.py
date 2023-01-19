@@ -24,11 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.getenv("SECRET_KEY"))
+# SECRET_KEY = 'django-insecure-*s#@u0r5s*yk+uv)azoxmz7)xvoa7$a*(2klcrbs&)=mi4s!b)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".vercel.app"]
 
 
 # Application definition
@@ -137,7 +138,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Messages
 
 from django.contrib.messages import constants as messages
+
 MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
-    messages.SUCCESS: 'success',
+    messages.ERROR: "danger",
+    messages.SUCCESS: "success",
 }
