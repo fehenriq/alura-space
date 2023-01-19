@@ -28,7 +28,7 @@ SECRET_KEY = str(os.getenv("SECRET_KEY"))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app", ".now.sh", "127.0.0.1"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -137,8 +137,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Messages
 
 from django.contrib.messages import constants as messages
-
 MESSAGE_TAGS = {
-    messages.ERROR: "danger",
-    messages.SUCCESS: "success",
+    messages.ERROR: 'danger',
+    messages.SUCCESS: 'success',
 }
