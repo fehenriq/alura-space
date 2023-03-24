@@ -14,6 +14,7 @@ SECRET_KEY = str(os.getenv("SECRET_KEY"))
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ["https://django-alura-space-production.up.railway.app"]
 
 # Application definition
 
