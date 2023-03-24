@@ -3,7 +3,7 @@
   <section class="imagem">
     <div class="imagem__conteudo">
       {% if fotografia.foto == "" or fotografia.foto == null %}
-      <img class="imagem__imagem" src="{% static '/assets/imagens/galeria/not-found.png' %}" alt="foto" />
+      <img class="imagem__imagem" src="{% static 'assets/imagens/galeria/not-found.png' %}" alt="foto" />
       {% else %}
       <img class="imagem__imagem" src="{{ fotografia.foto.url }}" alt="foto" />
       {% endif %}
@@ -16,6 +16,10 @@
           <p class="imagem__texto">
             {{ fotografia.descricao }}
           </p>
+        </div>
+        <div>
+          <a href="{% url 'edit_image' fotografia.id %}"><button class="btn btn-success col-12" style="padding: top 5px;" type="submit">Editar</button></a>
+          <a href="{% url 'delete_image' fotografia.id %}"><button class="btn btn-danger col-12" style="padding: top 5px;" type="submit">Deletar</button></a>
         </div>
       </div>
     </div>
